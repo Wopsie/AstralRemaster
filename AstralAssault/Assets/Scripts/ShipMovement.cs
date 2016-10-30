@@ -41,7 +41,7 @@ public class ShipMovement : MonoBehaviour {
 
     void FixedUpdate()
     {
-        //ShipAccelleration();
+        ShipAccelleration();
         TurningInput();
 
         
@@ -87,15 +87,17 @@ public class ShipMovement : MonoBehaviour {
     {
         //turn ship
         float turnHorizontal = Input.GetAxis("Horizontal") * 2f;
-        //rb.AddTorque(transform.up * torque * turnHorizontal);
+        rb.AddTorque(transform.up * torque * turnHorizontal);
 
         //up & down
         float turnVertical = Input.GetAxis("Vertical") * 3.5f;
-        //rb.AddTorque(transform.right * torque * turnVertical);
+        rb.AddTorque(transform.right * torque * turnVertical);
 
         bankRefrenceScript.TurnObj(turnHorizontal);
 
-        hull.transform.rotation = Quaternion.Slerp(hull.transform.rotation, bankRefrence.transform.rotation, Time.time * 0.05f);
+        hull.transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, transform.localEulerAngles.z);
+
+        hull.transform.rotation = Quaternion.Slerp(hull.transform.localRotation, bankRefrence.transform.rotation, Time.time * 0.05f);
     }
 
     //speed up and slow down ship
