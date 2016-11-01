@@ -1,0 +1,574 @@
+fileFormatVersion: 2
+guid: 768208f55c0953748864b7582015e7b7
+timeCreated: 1477905500
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Bottom_Engine
+    100002: //RootNode
+    100004: group1
+    100006: L_boost_Bottom
+    100008: L_boost_bottom
+    100010: L_boost_top
+    100012: L_Engine
+    100014: locator1
+    100016: pCube12
+    100018: pCube2
+    100020: pCube7
+    100022: pCube8
+    100024: pCube9
+    100026: polySurface10
+    100028: polySurface11
+    100030: polySurface12
+    100032: polySurface14
+    100034: polySurface15
+    100036: polySurface15 1
+    100038: polySurface21
+    100040: polySurface24
+    100042: pPipe1
+    100044: pPipe2
+    100046: R_boost_top
+    100048: R_Engine
+    100050: transform1
+    100052: transform12
+    100054: transform13
+    100056: transform2
+    100058: transform4
+    100060: transform5
+    100062: transform6
+    100064: transform7
+    100066: transform8
+    100068: transform9
+    400000: Bottom_Engine
+    400002: //RootNode
+    400004: group1
+    400006: L_boost_Bottom
+    400008: L_boost_bottom
+    400010: L_boost_top
+    400012: L_Engine
+    400014: locator1
+    400016: pCube12
+    400018: pCube2
+    400020: pCube7
+    400022: pCube8
+    400024: pCube9
+    400026: polySurface10
+    400028: polySurface11
+    400030: polySurface12
+    400032: polySurface14
+    400034: polySurface15
+    400036: polySurface15 1
+    400038: polySurface21
+    400040: polySurface24
+    400042: pPipe1
+    400044: pPipe2
+    400046: R_boost_top
+    400048: R_Engine
+    400050: transform1
+    400052: transform12
+    400054: transform13
+    400056: transform2
+    400058: transform4
+    400060: transform5
+    400062: transform6
+    400064: transform7
+    400066: transform8
+    400068: transform9
+    2300000: Bottom_Engine
+    2300002: L_boost_Bottom
+    2300004: L_boost_bottom
+    2300006: L_boost_top
+    2300008: L_Engine
+    2300010: pCube2
+    2300012: pCube7
+    2300014: polySurface21
+    2300016: pPipe1
+    2300018: pPipe2
+    2300020: R_boost_top
+    2300022: R_Engine
+    3300000: Bottom_Engine
+    3300002: L_boost_Bottom
+    3300004: L_boost_bottom
+    3300006: L_boost_top
+    3300008: L_Engine
+    3300010: pCube2
+    3300012: pCube7
+    3300014: polySurface21
+    3300016: pPipe1
+    3300018: pPipe2
+    3300020: R_boost_top
+    3300022: R_Engine
+    4300000: pCube2
+    4300002: pCube7
+    4300004: pPipe1
+    4300006: polySurface21
+    4300008: pPipe2
+    4300010: L_Engine
+    4300012: R_Engine
+    4300014: Bottom_Engine
+    4300016: L_boost_top
+    4300018: L_boost_Bottom
+    4300020: R_boost_top
+    4300022: L_boost_bottom
+    7400000: Normal Idle
+    7400002: Boost Engage
+    7400004: Boost Idle
+    7400006: Boost Disengage
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Normal Idle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: locator1
+        weight: 1
+      - path: locator1/group1
+        weight: 1
+      - path: locator1/group1/Bottom_Engine
+        weight: 1
+      - path: locator1/group1/L_boost_Bottom
+        weight: 1
+      - path: locator1/group1/L_boost_bottom
+        weight: 1
+      - path: locator1/group1/L_boost_top
+        weight: 1
+      - path: locator1/group1/L_Engine
+        weight: 1
+      - path: locator1/group1/R_boost_top
+        weight: 1
+      - path: locator1/group1/R_Engine
+        weight: 1
+      - path: locator1/pCube2
+        weight: 1
+      - path: locator1/pCube7
+        weight: 1
+      - path: locator1/pCube12
+        weight: 1
+      - path: locator1/pCube12/transform12
+        weight: 1
+      - path: locator1/polySurface21
+        weight: 1
+      - path: locator1/polySurface24
+        weight: 1
+      - path: locator1/polySurface24/transform13
+        weight: 1
+      - path: locator1/pPipe1
+        weight: 1
+      - path: locator1/pPipe2
+        weight: 1
+      - path: pCube8
+        weight: 1
+      - path: pCube8/transform8
+        weight: 1
+      - path: pCube9
+        weight: 1
+      - path: pCube9/transform9
+        weight: 1
+      - path: polySurface10
+        weight: 1
+      - path: polySurface10/polySurface12
+        weight: 1
+      - path: polySurface10/polySurface12/transform4
+        weight: 1
+      - path: polySurface10/transform1
+        weight: 1
+      - path: polySurface11
+        weight: 1
+      - path: polySurface11/polySurface14
+        weight: 1
+      - path: polySurface11/polySurface14/transform6
+        weight: 1
+      - path: polySurface11/polySurface15 1
+        weight: 1
+      - path: polySurface11/polySurface15 1/transform5
+        weight: 1
+      - path: polySurface11/transform2
+        weight: 1
+      - path: polySurface15
+        weight: 1
+      - path: polySurface15/transform7
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Boost Engage
+      takeName: Take 001
+      firstFrame: 160
+      lastFrame: 170
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: locator1
+        weight: 1
+      - path: locator1/group1
+        weight: 1
+      - path: locator1/group1/Bottom_Engine
+        weight: 1
+      - path: locator1/group1/L_boost_Bottom
+        weight: 1
+      - path: locator1/group1/L_boost_bottom
+        weight: 1
+      - path: locator1/group1/L_boost_top
+        weight: 1
+      - path: locator1/group1/L_Engine
+        weight: 1
+      - path: locator1/group1/R_boost_top
+        weight: 1
+      - path: locator1/group1/R_Engine
+        weight: 1
+      - path: locator1/pCube2
+        weight: 1
+      - path: locator1/pCube7
+        weight: 1
+      - path: locator1/pCube12
+        weight: 1
+      - path: locator1/pCube12/transform12
+        weight: 1
+      - path: locator1/polySurface21
+        weight: 1
+      - path: locator1/polySurface24
+        weight: 1
+      - path: locator1/polySurface24/transform13
+        weight: 1
+      - path: locator1/pPipe1
+        weight: 1
+      - path: locator1/pPipe2
+        weight: 1
+      - path: pCube8
+        weight: 1
+      - path: pCube8/transform8
+        weight: 1
+      - path: pCube9
+        weight: 1
+      - path: pCube9/transform9
+        weight: 1
+      - path: polySurface10
+        weight: 1
+      - path: polySurface10/polySurface12
+        weight: 1
+      - path: polySurface10/polySurface12/transform4
+        weight: 1
+      - path: polySurface10/transform1
+        weight: 1
+      - path: polySurface11
+        weight: 1
+      - path: polySurface11/polySurface14
+        weight: 1
+      - path: polySurface11/polySurface14/transform6
+        weight: 1
+      - path: polySurface11/polySurface15 1
+        weight: 1
+      - path: polySurface11/polySurface15 1/transform5
+        weight: 1
+      - path: polySurface11/transform2
+        weight: 1
+      - path: polySurface15
+        weight: 1
+      - path: polySurface15/transform7
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Boost Idle
+      takeName: Take 001
+      firstFrame: 180
+      lastFrame: 190
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: locator1
+        weight: 1
+      - path: locator1/group1
+        weight: 1
+      - path: locator1/group1/Bottom_Engine
+        weight: 1
+      - path: locator1/group1/L_boost_Bottom
+        weight: 1
+      - path: locator1/group1/L_boost_bottom
+        weight: 1
+      - path: locator1/group1/L_boost_top
+        weight: 1
+      - path: locator1/group1/L_Engine
+        weight: 1
+      - path: locator1/group1/R_boost_top
+        weight: 1
+      - path: locator1/group1/R_Engine
+        weight: 1
+      - path: locator1/pCube2
+        weight: 1
+      - path: locator1/pCube7
+        weight: 1
+      - path: locator1/pCube12
+        weight: 1
+      - path: locator1/pCube12/transform12
+        weight: 1
+      - path: locator1/polySurface21
+        weight: 1
+      - path: locator1/polySurface24
+        weight: 1
+      - path: locator1/polySurface24/transform13
+        weight: 1
+      - path: locator1/pPipe1
+        weight: 1
+      - path: locator1/pPipe2
+        weight: 1
+      - path: pCube8
+        weight: 1
+      - path: pCube8/transform8
+        weight: 1
+      - path: pCube9
+        weight: 1
+      - path: pCube9/transform9
+        weight: 1
+      - path: polySurface10
+        weight: 1
+      - path: polySurface10/polySurface12
+        weight: 1
+      - path: polySurface10/polySurface12/transform4
+        weight: 1
+      - path: polySurface10/transform1
+        weight: 1
+      - path: polySurface11
+        weight: 1
+      - path: polySurface11/polySurface14
+        weight: 1
+      - path: polySurface11/polySurface14/transform6
+        weight: 1
+      - path: polySurface11/polySurface15 1
+        weight: 1
+      - path: polySurface11/polySurface15 1/transform5
+        weight: 1
+      - path: polySurface11/transform2
+        weight: 1
+      - path: polySurface15
+        weight: 1
+      - path: polySurface15/transform7
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Boost Disengage
+      takeName: Take 001
+      firstFrame: 200
+      lastFrame: 210
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: locator1
+        weight: 1
+      - path: locator1/group1
+        weight: 1
+      - path: locator1/group1/Bottom_Engine
+        weight: 1
+      - path: locator1/group1/L_boost_Bottom
+        weight: 1
+      - path: locator1/group1/L_boost_bottom
+        weight: 1
+      - path: locator1/group1/L_boost_top
+        weight: 1
+      - path: locator1/group1/L_Engine
+        weight: 1
+      - path: locator1/group1/R_boost_top
+        weight: 1
+      - path: locator1/group1/R_Engine
+        weight: 1
+      - path: locator1/pCube2
+        weight: 1
+      - path: locator1/pCube7
+        weight: 1
+      - path: locator1/pCube12
+        weight: 1
+      - path: locator1/pCube12/transform12
+        weight: 1
+      - path: locator1/polySurface21
+        weight: 1
+      - path: locator1/polySurface24
+        weight: 1
+      - path: locator1/polySurface24/transform13
+        weight: 1
+      - path: locator1/pPipe1
+        weight: 1
+      - path: locator1/pPipe2
+        weight: 1
+      - path: pCube8
+        weight: 1
+      - path: pCube8/transform8
+        weight: 1
+      - path: pCube9
+        weight: 1
+      - path: pCube9/transform9
+        weight: 1
+      - path: polySurface10
+        weight: 1
+      - path: polySurface10/polySurface12
+        weight: 1
+      - path: polySurface10/polySurface12/transform4
+        weight: 1
+      - path: polySurface10/transform1
+        weight: 1
+      - path: polySurface11
+        weight: 1
+      - path: polySurface11/polySurface14
+        weight: 1
+      - path: polySurface11/polySurface14/transform6
+        weight: 1
+      - path: polySurface11/polySurface15 1
+        weight: 1
+      - path: polySurface11/polySurface15 1/transform5
+        weight: 1
+      - path: polySurface11/transform2
+        weight: 1
+      - path: polySurface15
+        weight: 1
+      - path: polySurface15/transform7
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -10,15 +10,18 @@ public class ObjectTurner : MonoBehaviour {
     [SerializeField]
     private GameObject plane;
     
-    void Update()
+    void FixedUpdate()
     {
-        transform.position = plane.transform.position;
-        transform.eulerAngles = new Vector3(plane.transform.eulerAngles.x, plane.transform.eulerAngles.y, plane.transform.eulerAngles.z);
+        //transform.position = plane.transform.position;
+        //transform.eulerAngles = new Vector3(plane.transform.eulerAngles.x, plane.transform.eulerAngles.y, plane.transform.eulerAngles.z);
+
+        //transform.rotation = plane.transform.rotation;
     }
 
     public void TurnObj(float multiplier)
     {
-        bankAngle = new Vector3(plane.transform.localRotation.x, plane.transform.localRotation.y, plane.transform.localRotation.z + 25);
+        //bankAngle = new Vector3(plane.transform.localRotation.x, plane.transform.localRotation.y, plane.transform.localRotation.z + 25);
+        bankAngle = new Vector3(this.transform.localRotation.x, this.transform.localRotation.y, this.transform.localRotation.z + 25);
 
         if(multiplier != 0)
         {
