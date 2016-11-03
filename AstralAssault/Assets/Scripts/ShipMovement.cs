@@ -9,13 +9,12 @@ using System.Collections;
 [RequireComponent(typeof(Rigidbody))]
 public class ShipMovement : MonoBehaviour {
 
-    [SerializeField]
-    private Rigidbody rb;
-    [SerializeField]
-    private KeyboardInput keyboard;
+    [SerializeField] private Rigidbody rb;
+    [SerializeField] private KeyboardInput keyboard;
+    [SerializeField] private ObjectTurner objTurnScript;
+    [SerializeField] private float torque;
 
-    public float torque;
-    public ObjectTurner objTurnScript;
+    private Vector3 speed = new Vector3(0, 0, 300);
 
     void Start()
     {
@@ -24,30 +23,46 @@ public class ShipMovement : MonoBehaviour {
 
     void FixedUpdate()
     {
-        TurningInput();
+        YawShip();
+        PitchShip();
+        RollShip();
         ShipAccelleration();
     }
 
-    void TurningInput()
+    void YawShip()
     {
-
-        Debug.Log(transform.up);
-        //turn ship
+        //yaw ship left & right
         float turnHorizontal = Input.GetAxis("Horizontal") * 2f;
-        rb.AddTorque(new Vector3(0,1,0) * torque * turnHorizontal);
-
-        //up & down
-        float turnVertical = Input.GetAxis("Vertical") * 3.5f;
-        rb.AddTorque(transform.right * torque * turnVertical);
-
+        rb.AddTorque(new Vector3(0, 1, 0) * torque * turnHorizontal);
 
         objTurnScript.TurnObj(turnHorizontal);
     }
 
-    //speed up and slow down ship
+    void PitchShip()
+    {
+        //pitch ship up & down
+        float turnVertical = Input.GetAxis("Vertical") * 3.5f;
+        rb.AddTorque(transform.right * torque * turnVertical);
+    }
+
+    void RollShip()
+    {
+        if (keyboard.e)
+        {
+            //bank right
+            rb.AddTorque(transform.forward * -torque * 5);
+        }
+        else if (keyboard.q)
+        {
+            //bank left
+            rb.AddTorque(transform.forward * torque * 5);
+        }
+    }
+
+    
     void ShipAccelleration()
     {
-        //transform.position += transform.forward * Time.deltaTime * 30;
-        rb.AddRelativeForce(new Vector3(0,0,900) * 0.5f);
+        //speed up ship
+        rb.AddRelativeForce(speed);
     }
 }
