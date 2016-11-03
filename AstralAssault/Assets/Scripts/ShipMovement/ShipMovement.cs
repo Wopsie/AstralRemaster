@@ -33,7 +33,7 @@ public class ShipMovement : MonoBehaviour {
     {
         //yaw ship left & right
         float turnHorizontal = Input.GetAxis("Horizontal") * 2f;
-        rb.AddTorque(new Vector3(0, 1, 0) * torque * turnHorizontal);
+        rb.AddTorque(transform.up * torque * turnHorizontal);
 
         objTurnScript.TurnObj(turnHorizontal);
     }
