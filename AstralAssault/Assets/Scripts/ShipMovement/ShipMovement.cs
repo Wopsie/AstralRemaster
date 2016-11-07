@@ -27,6 +27,7 @@ public class ShipMovement : MonoBehaviour {
         PitchShip();
         RollShip();
         ShipAccelleration();
+        ShipVelocity();
     }
 
     void YawShip()
@@ -59,7 +60,26 @@ public class ShipMovement : MonoBehaviour {
         }
     }
 
-    
+    void ShipVelocity()
+    {
+        //accellerate
+        if(keyboard.lShift)
+        {
+            rb.drag = 2;
+            torque = 0.8f;
+        }
+        else if (keyboard.rShift) //brake
+        {
+            rb.drag = 4.35f;
+            torque = 1.6f;
+        }
+        else //no buttons pressed neutral speed
+        {
+            rb.drag = 3;
+            torque = 1.2f;
+        }
+    }
+
     void ShipAccelleration()
     {
         //speed up ship

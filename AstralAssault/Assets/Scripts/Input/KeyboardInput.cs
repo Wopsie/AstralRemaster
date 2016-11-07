@@ -4,7 +4,7 @@ using System.Collections;
 public class KeyboardInput : MonoBehaviour {
 
     [HideInInspector]
-    public bool up, down, left, right, space, lShift, rShift, w, a, s, d, q, e, r, lCntr, rCntr = false;
+    public bool up, down, left, right, space, lShift, rShift, w, a, s, d, q, e, r, lAlt, rAlt, lCntr, rCntr = false;
 
     void Update()
     {
@@ -34,5 +34,7 @@ public class KeyboardInput : MonoBehaviour {
         space = Input.GetKey(KeyCode.Space);
         lCntr = Input.GetKey(KeyCode.LeftControl);
         rCntr = Input.GetKey(KeyCode.RightControl);
+        lAlt = Input.GetKey(KeyCode.LeftAlt);
+        rAlt = Input.GetKey(KeyCode.RightAlt);
     }
 }
