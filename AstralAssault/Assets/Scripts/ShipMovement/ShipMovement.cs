@@ -13,6 +13,7 @@ public class ShipMovement : MonoBehaviour {
     [SerializeField] private KeyboardInput keyboard;
     [SerializeField] private ObjectTurner objTurnScript;
     [SerializeField] private float torque;
+    [SerializeField] private ParticleSystem thruster;
 
     private Vector3 speed = new Vector3(0, 0, 300);
 
@@ -67,6 +68,8 @@ public class ShipMovement : MonoBehaviour {
         {
             rb.drag = 2;
             torque = 0.8f;
+
+            thruster.startLifetime = 1f;
         }
         else if (keyboard.rShift) //brake
         {
@@ -75,6 +78,7 @@ public class ShipMovement : MonoBehaviour {
         }
         else //no buttons pressed neutral speed
         {
+            thruster.startLifetime = 0.34f;
             rb.drag = 3;
             torque = 1.2f;
         }
