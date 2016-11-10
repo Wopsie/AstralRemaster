@@ -11,7 +11,6 @@ public class SphereRange : MonoBehaviour
     [SerializeField]
     private bool wireframe = false;
 
-    [SerializeField]
     private int layerMask;
 
     public delegate void TargetPasser(Vector3 targetPos);
@@ -32,11 +31,15 @@ public class SphereRange : MonoBehaviour
         //overlapsphere at the transforms position with radius through inspector
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, radius, layerMask);
 
+        Debug.Log(hitColliders.Length);
+
         //if something is detected by the overlapsphere
         if(hitColliders.Length != 0)
         {
             //coordinates of the first collider detected by overlapsphere
             Vector3 targetVector = hitColliders[0].transform.position;
+
+            Debug.Log(hitColliders[0].transform.name);
 
             if (PassTarget != null)
             {
