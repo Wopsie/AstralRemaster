@@ -1,0 +1,634 @@
+fileFormatVersion: 2
+guid: 7f102e02ad836c84498c81fb90df74ad
+timeCreated: 1479121882
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Base
+    100002: Bottom_Engine
+    100004: Cockpit_Glass
+    100006: L
+    100008: L_Booster
+    100010: L_engine
+    100012: L_gun
+    100014: L_Wing
+    100016: pCube36
+    100018: pCube36 1
+    100020: pCylinder10
+    100022: pCylinder10 1
+    100024: pCylinder12
+    100026: pCylinder12 1
+    100028: pCylinder5
+    100030: pCylinder5 1
+    100032: pCylinder8
+    100034: pCylinder8 1
+    100036: pCylinder9
+    100038: pCylinder9 1
+    100040: //RootNode
+    100042: polySurface65
+    100044: polySurface65 1
+    100046: polySurface66
+    100048: polySurface66 1
+    100050: polySurface68
+    100052: polySurface68 1
+    100054: polySurface69
+    100056: polySurface69 1
+    100058: R
+    100060: R_Booster
+    100062: R_engine
+    100064: R_gun
+    100066: R_Wing
+    100068: Seat
+    400000: Base
+    400002: Bottom_Engine
+    400004: Cockpit_Glass
+    400006: L
+    400008: L_Booster
+    400010: L_engine
+    400012: L_gun
+    400014: L_Wing
+    400016: pCube36
+    400018: pCube36 1
+    400020: pCylinder10
+    400022: pCylinder10 1
+    400024: pCylinder12
+    400026: pCylinder12 1
+    400028: pCylinder5
+    400030: pCylinder5 1
+    400032: pCylinder8
+    400034: pCylinder8 1
+    400036: pCylinder9
+    400038: pCylinder9 1
+    400040: //RootNode
+    400042: polySurface65
+    400044: polySurface65 1
+    400046: polySurface66
+    400048: polySurface66 1
+    400050: polySurface68
+    400052: polySurface68 1
+    400054: polySurface69
+    400056: polySurface69 1
+    400058: R
+    400060: R_Booster
+    400062: R_engine
+    400064: R_gun
+    400066: R_Wing
+    400068: Seat
+    2300000: Base
+    2300002: Bottom_Engine
+    2300004: Cockpit_Glass
+    2300006: L_Booster
+    2300008: L_engine
+    2300010: L_gun
+    2300012: L_Wing
+    2300014: pCube36
+    2300016: pCube36 1
+    2300018: pCylinder10
+    2300020: pCylinder10 1
+    2300022: pCylinder12
+    2300024: pCylinder12 1
+    2300026: pCylinder5
+    2300028: pCylinder5 1
+    2300030: pCylinder8
+    2300032: pCylinder8 1
+    2300034: pCylinder9
+    2300036: pCylinder9 1
+    2300038: polySurface65
+    2300040: polySurface65 1
+    2300042: polySurface66
+    2300044: polySurface66 1
+    2300046: polySurface68
+    2300048: polySurface68 1
+    2300050: polySurface69
+    2300052: polySurface69 1
+    2300054: R_Booster
+    2300056: R_engine
+    2300058: R_gun
+    2300060: R_Wing
+    2300062: Seat
+    3300000: Base
+    3300002: Bottom_Engine
+    3300004: Cockpit_Glass
+    3300006: L_Booster
+    3300008: L_engine
+    3300010: L_gun
+    3300012: L_Wing
+    3300014: pCube36
+    3300016: pCube36 1
+    3300018: pCylinder10
+    3300020: pCylinder10 1
+    3300022: pCylinder12
+    3300024: pCylinder12 1
+    3300026: pCylinder5
+    3300028: pCylinder5 1
+    3300030: pCylinder8
+    3300032: pCylinder8 1
+    3300034: pCylinder9
+    3300036: pCylinder9 1
+    3300038: polySurface65
+    3300040: polySurface65 1
+    3300042: polySurface66
+    3300044: polySurface66 1
+    3300046: polySurface68
+    3300048: polySurface68 1
+    3300050: polySurface69
+    3300052: polySurface69 1
+    3300054: R_Booster
+    3300056: R_engine
+    3300058: R_gun
+    3300060: R_Wing
+    3300062: Seat
+    4300000: Base
+    4300002: Bottom_Engine
+    4300004: Seat
+    4300006: L_gun
+    4300008: Cockpit_Glass
+    4300010: R_gun
+    4300012: L_engine
+    4300014: L_Wing
+    4300016: polySurface68
+    4300018: polySurface65
+    4300020: polySurface69
+    4300022: polySurface66
+    4300024: L_Booster
+    4300026: pCube36
+    4300028: pCylinder12
+    4300030: pCylinder9
+    4300032: pCylinder8
+    4300034: pCylinder10
+    4300036: pCylinder5
+    4300038: R_engine
+    4300040: R_Wing
+    4300042: polySurface68
+    4300044: polySurface65
+    4300046: polySurface69
+    4300048: polySurface66
+    4300050: R_Booster
+    4300052: pCube36
+    4300054: pCylinder12
+    4300056: pCylinder9
+    4300058: pCylinder8
+    4300060: pCylinder10
+    4300062: pCylinder5
+    7400000: Normal Idle
+    7400002: Boost Engage
+    7400004: Boost Idle
+    7400006: Boost Disengage
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Normal Idle
+      takeName: Take 001
+      firstFrame: 15
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Base
+        weight: 1
+      - path: Bottom_Engine
+        weight: 1
+      - path: Cockpit_Glass
+        weight: 1
+      - path: L
+        weight: 1
+      - path: L/L_Wing
+        weight: 1
+      - path: L/L_Wing/L_Booster
+        weight: 1
+      - path: L/L_Wing/L_Booster/pCube36
+        weight: 1
+      - path: L/L_Wing/L_Booster/pCylinder5
+        weight: 1
+      - path: L/L_Wing/L_Booster/pCylinder8
+        weight: 1
+      - path: L/L_Wing/L_Booster/pCylinder9
+        weight: 1
+      - path: L/L_Wing/L_Booster/pCylinder10
+        weight: 1
+      - path: L/L_Wing/L_Booster/pCylinder12
+        weight: 1
+      - path: L/L_Wing/polySurface65
+        weight: 1
+      - path: L/L_Wing/polySurface66
+        weight: 1
+      - path: L/L_Wing/polySurface68
+        weight: 1
+      - path: L/L_Wing/polySurface69
+        weight: 1
+      - path: L_engine
+        weight: 1
+      - path: L_gun
+        weight: 1
+      - path: R
+        weight: 1
+      - path: R/R_Wing
+        weight: 1
+      - path: R/R_Wing/polySurface65 1
+        weight: 1
+      - path: R/R_Wing/polySurface66 1
+        weight: 1
+      - path: R/R_Wing/polySurface68 1
+        weight: 1
+      - path: R/R_Wing/polySurface69 1
+        weight: 1
+      - path: R/R_Wing/R_Booster
+        weight: 1
+      - path: R/R_Wing/R_Booster/pCube36 1
+        weight: 1
+      - path: R/R_Wing/R_Booster/pCylinder5 1
+        weight: 1
+      - path: R/R_Wing/R_Booster/pCylinder8 1
+        weight: 1
+      - path: R/R_Wing/R_Booster/pCylinder9 1
+        weight: 1
+      - path: R/R_Wing/R_Booster/pCylinder10 1
+        weight: 1
+      - path: R/R_Wing/R_Booster/pCylinder12 1
+        weight: 1
+      - path: R_engine
+        weight: 1
+      - path: R_gun
+        weight: 1
+      - path: Seat
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Boost Engage
+      takeName: Take 001
+      firstFrame: 25
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Base
+        weight: 1
+      - path: Bottom_Engine
+        weight: 1
+      - path: Cockpit_Glass
+        weight: 1
+      - path: L
+        weight: 1
+      - path: L/L_Wing
+        weight: 1
+      - path: L/L_Wing/L_Booster
+        weight: 1
+      - path: L/L_Wing/L_Booster/pCube36
+        weight: 1
+      - path: L/L_Wing/L_Booster/pCylinder5
+        weight: 1
+      - path: L/L_Wing/L_Booster/pCylinder8
+        weight: 1
+      - path: L/L_Wing/L_Booster/pCylinder9
+        weight: 1
+      - path: L/L_Wing/L_Booster/pCylinder10
+        weight: 1
+      - path: L/L_Wing/L_Booster/pCylinder12
+        weight: 1
+      - path: L/L_Wing/polySurface65
+        weight: 1
+      - path: L/L_Wing/polySurface66
+        weight: 1
+      - path: L/L_Wing/polySurface68
+        weight: 1
+      - path: L/L_Wing/polySurface69
+        weight: 1
+      - path: L_engine
+        weight: 1
+      - path: L_gun
+        weight: 1
+      - path: R
+        weight: 1
+      - path: R/R_Wing
+        weight: 1
+      - path: R/R_Wing/polySurface65 1
+        weight: 1
+      - path: R/R_Wing/polySurface66 1
+        weight: 1
+      - path: R/R_Wing/polySurface68 1
+        weight: 1
+      - path: R/R_Wing/polySurface69 1
+        weight: 1
+      - path: R/R_Wing/R_Booster
+        weight: 1
+      - path: R/R_Wing/R_Booster/pCube36 1
+        weight: 1
+      - path: R/R_Wing/R_Booster/pCylinder5 1
+        weight: 1
+      - path: R/R_Wing/R_Booster/pCylinder8 1
+        weight: 1
+      - path: R/R_Wing/R_Booster/pCylinder9 1
+        weight: 1
+      - path: R/R_Wing/R_Booster/pCylinder10 1
+        weight: 1
+      - path: R/R_Wing/R_Booster/pCylinder12 1
+        weight: 1
+      - path: R_engine
+        weight: 1
+      - path: R_gun
+        weight: 1
+      - path: Seat
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Boost Idle
+      takeName: Take 001
+      firstFrame: 40
+      lastFrame: 45
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Base
+        weight: 1
+      - path: Bottom_Engine
+        weight: 1
+      - path: Cockpit_Glass
+        weight: 1
+      - path: L
+        weight: 1
+      - path: L/L_Wing
+        weight: 1
+      - path: L/L_Wing/L_Booster
+        weight: 1
+      - path: L/L_Wing/L_Booster/pCube36
+        weight: 1
+      - path: L/L_Wing/L_Booster/pCylinder5
+        weight: 1
+      - path: L/L_Wing/L_Booster/pCylinder8
+        weight: 1
+      - path: L/L_Wing/L_Booster/pCylinder9
+        weight: 1
+      - path: L/L_Wing/L_Booster/pCylinder10
+        weight: 1
+      - path: L/L_Wing/L_Booster/pCylinder12
+        weight: 1
+      - path: L/L_Wing/polySurface65
+        weight: 1
+      - path: L/L_Wing/polySurface66
+        weight: 1
+      - path: L/L_Wing/polySurface68
+        weight: 1
+      - path: L/L_Wing/polySurface69
+        weight: 1
+      - path: L_engine
+        weight: 1
+      - path: L_gun
+        weight: 1
+      - path: R
+        weight: 1
+      - path: R/R_Wing
+        weight: 1
+      - path: R/R_Wing/polySurface65 1
+        weight: 1
+      - path: R/R_Wing/polySurface66 1
+        weight: 1
+      - path: R/R_Wing/polySurface68 1
+        weight: 1
+      - path: R/R_Wing/polySurface69 1
+        weight: 1
+      - path: R/R_Wing/R_Booster
+        weight: 1
+      - path: R/R_Wing/R_Booster/pCube36 1
+        weight: 1
+      - path: R/R_Wing/R_Booster/pCylinder5 1
+        weight: 1
+      - path: R/R_Wing/R_Booster/pCylinder8 1
+        weight: 1
+      - path: R/R_Wing/R_Booster/pCylinder9 1
+        weight: 1
+      - path: R/R_Wing/R_Booster/pCylinder10 1
+        weight: 1
+      - path: R/R_Wing/R_Booster/pCylinder12 1
+        weight: 1
+      - path: R_engine
+        weight: 1
+      - path: R_gun
+        weight: 1
+      - path: Seat
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Boost Disengage
+      takeName: Take 001
+      firstFrame: 45
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Base
+        weight: 1
+      - path: Bottom_Engine
+        weight: 1
+      - path: Cockpit_Glass
+        weight: 1
+      - path: L
+        weight: 1
+      - path: L/L_Wing
+        weight: 1
+      - path: L/L_Wing/L_Booster
+        weight: 1
+      - path: L/L_Wing/L_Booster/pCube36
+        weight: 1
+      - path: L/L_Wing/L_Booster/pCylinder5
+        weight: 1
+      - path: L/L_Wing/L_Booster/pCylinder8
+        weight: 1
+      - path: L/L_Wing/L_Booster/pCylinder9
+        weight: 1
+      - path: L/L_Wing/L_Booster/pCylinder10
+        weight: 1
+      - path: L/L_Wing/L_Booster/pCylinder12
+        weight: 1
+      - path: L/L_Wing/polySurface65
+        weight: 1
+      - path: L/L_Wing/polySurface66
+        weight: 1
+      - path: L/L_Wing/polySurface68
+        weight: 1
+      - path: L/L_Wing/polySurface69
+        weight: 1
+      - path: L_engine
+        weight: 1
+      - path: L_gun
+        weight: 1
+      - path: R
+        weight: 1
+      - path: R/R_Wing
+        weight: 1
+      - path: R/R_Wing/polySurface65 1
+        weight: 1
+      - path: R/R_Wing/polySurface66 1
+        weight: 1
+      - path: R/R_Wing/polySurface68 1
+        weight: 1
+      - path: R/R_Wing/polySurface69 1
+        weight: 1
+      - path: R/R_Wing/R_Booster
+        weight: 1
+      - path: R/R_Wing/R_Booster/pCube36 1
+        weight: 1
+      - path: R/R_Wing/R_Booster/pCylinder5 1
+        weight: 1
+      - path: R/R_Wing/R_Booster/pCylinder8 1
+        weight: 1
+      - path: R/R_Wing/R_Booster/pCylinder9 1
+        weight: 1
+      - path: R/R_Wing/R_Booster/pCylinder10 1
+        weight: 1
+      - path: R/R_Wing/R_Booster/pCylinder12 1
+        weight: 1
+      - path: R_engine
+        weight: 1
+      - path: R_gun
+        weight: 1
+      - path: Seat
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

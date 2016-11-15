@@ -19,7 +19,7 @@ public class AxisRotation : MonoBehaviour {
 
     public void RotateTo(Vector3 targetPos)
     {
-        Debug.Log(targetPos);
+        //Debug.Log(targetPos);
         if(rotX)
         {
             //rotate over X axis

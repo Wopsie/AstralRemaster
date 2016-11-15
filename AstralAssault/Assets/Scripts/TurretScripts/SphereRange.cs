@@ -12,9 +12,19 @@ public class SphereRange : MonoBehaviour
     private bool wireframe = false;
 
     private int layerMask;
+    private int updateCount = 0;
 
     public delegate void TargetPasser(Vector3 targetPos);
     public TargetPasser PassTarget;
+
+    private Vector3 currTargetVector, lastTargetVector, targetMovementVector;
+
+    private PredictVector3 positionPredictor = new PredictVector3();
+
+    private Collider[] hitColliders;
+
+    [SerializeField]
+    private GameObject nuzzle;
 
     void Start()
     {
@@ -29,22 +39,37 @@ public class SphereRange : MonoBehaviour
     void SphereSize(float radius)
     {
         //overlapsphere at the transforms position with radius through inspector
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position, radius, layerMask);
-
-        Debug.Log(hitColliders.Length);
+        hitColliders = Physics.OverlapSphere(transform.position, radius, layerMask);
 
         //if something is detected by the overlapsphere
         if(hitColliders.Length != 0)
         {
-            //coordinates of the first collider detected by overlapsphere
-            Vector3 targetVector = hitColliders[0].transform.position;
+            updateCount += 1;
 
-            Debug.Log(hitColliders[0].transform.name);
+            //coordinates of the first collider detected by overlapsphere
+            currTargetVector = hitColliders[0].transform.position;
+
+            //if updatecount divided by 2 is higher than or equals to 1... basicly is it uneven
+            if (updateCount % 2 >= 1)
+            {
+                lastTargetVector = hitColliders[0].transform.position;
+            }
+
+            targetMovementVector = currTargetVector - lastTargetVector;
+            targetMovementVector = 3f * targetMovementVector;
+            
+            //make target position a random position inside a radius of the target
+            currTargetVector = Random.insideUnitSphere * 6 + currTargetVector;
+            
 
             if (PassTarget != null)
             {
-                PassTarget(targetVector);
+                PassTarget(positionPredictor.CalcPos(currTargetVector, nuzzle.transform.position, targetMovementVector, 10));
             }
+        }
+        else
+        {
+            updateCount = 0;
         }
     }
 
