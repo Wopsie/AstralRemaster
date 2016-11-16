@@ -54,17 +54,25 @@ public class SphereRange : MonoBehaviour
             {
                 lastTargetVector = hitColliders[0].transform.position;
             }
-
+            
+            //to be looked at later
             targetMovementVector = currTargetVector - lastTargetVector;
             targetMovementVector = 3f * targetMovementVector;
             
             //make target position a random position inside a radius of the target
             currTargetVector = Random.insideUnitSphere * 6 + currTargetVector;
-            
+
+            Vector3 targetPosition = Random.insideUnitSphere * 3 + hitColliders[0].transform.position;
+            //Vector3 targetPosition = hitColliders[0].transform.position;
+
 
             if (PassTarget != null)
             {
-                PassTarget(positionPredictor.CalcPos(currTargetVector, nuzzle.transform.position, targetMovementVector, 10));
+                //demo
+                PassTarget(targetPosition);
+
+                //to be fixed later
+                //PassTarget(positionPredictor.CalcPos(currTargetVector, nuzzle.transform.position, targetMovementVector, 10));
             }
         }
         else

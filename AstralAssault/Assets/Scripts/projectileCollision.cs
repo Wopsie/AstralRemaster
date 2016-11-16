@@ -31,6 +31,8 @@ public class projectileCollision : MonoBehaviour {
                 var boom = (GameObject)Instantiate(sparks, this.transform.position, transform.rotation);
                 Destroy(boom, 3);
                 Debug.Log("Hit Player");
+
+                Destroy(gameObject);
             }
         }
 
