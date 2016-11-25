@@ -18,7 +18,7 @@ public class projectileCollision : MonoBehaviour {
 
 	void Update()
     {
-        Vector3 fwd = transform.TransformDirection(Vector3.forward / 2);
+        Vector3 fwd = transform.TransformDirection(Vector3.forward / 20);
 
         RaycastHit hit;
 
@@ -26,16 +26,13 @@ public class projectileCollision : MonoBehaviour {
         {
             //print("Found an object - distance: " + hit.collider.gameObject.name);
             
-            if (hit.collider.gameObject.tag != null)
+            if (hit.collider.gameObject.tag == "Player")
             {
                 var boom = (GameObject)Instantiate(sparks, this.transform.position, transform.rotation);
                 Destroy(boom, 3);
-                Debug.Log("Hit Player");
 
                 Destroy(gameObject);
             }
-        }
-
-            
+        }   
     }
 }

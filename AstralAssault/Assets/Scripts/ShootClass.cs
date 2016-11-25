@@ -8,18 +8,29 @@ public class ShootClass : MonoBehaviour {
 
     private int cooldown;
 
-    void Update()
-    {
-        if(cooldown <= 0)
-        {
-            //shoot
-            Debug.Log("shoot");
-            var shot = (GameObject)Instantiate(bullet, transform.position, transform.rotation);
-            Destroy(shot, 10);
+    [SerializeField]
+    private SphereRange turretRange;
 
-            cooldown = 50;
-        }
-        cooldown--;
+    void Start()
+    {
+        //delegate from sphereRange
+        turretRange.PassTarget += Shoot;
     }
 
+    void Shoot(Vector3 target)
+    {
+        if(target != null)
+        {
+            if (cooldown <= 0)
+            {
+                var shot = (GameObject)Instantiate(bullet, transform.position, transform.rotation);
+                Destroy(shot, 10);
+                cooldown = 50;
+                turretRange.ErrorMargin -= 0.2f;
+            }
+            else
+                cooldown--;
+            
+        }
+    }
 }
