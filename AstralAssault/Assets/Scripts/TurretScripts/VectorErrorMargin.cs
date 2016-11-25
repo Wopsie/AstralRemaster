@@ -5,7 +5,6 @@ using System.Collections;
 //this creates for a margin of error for things like turrets.
 public class VectorErrorMargin {
 
-    
     public Vector3 AddRandomUnitSphere(Vector3 targetPos, float errorMargin)
     {
         Vector3 targetPosition = Random.insideUnitSphere * errorMargin + targetPos;

@@ -29,8 +29,7 @@ public class ShootClass : MonoBehaviour {
                 turretRange.ErrorMargin -= 0.2f;
             }
             else
-                cooldown--;
-            
+                cooldown--; 
         }
     }
 }
