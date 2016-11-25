@@ -73,6 +73,7 @@
 -define:UNITY_EDITOR_OSX
 'Assets/Scripts/Camera/AerialFollowCam.cs'
 'Assets/Scripts/HitscanLaser.cs'
+'Assets/Scripts/Input/InputManager.cs'
 'Assets/Scripts/Input/KeyboardInput.cs'
 'Assets/Scripts/ShipMovement/HullRotator.cs'
 'Assets/Scripts/ShipMovement/ObjectTurner.cs'

@@ -70,61 +70,21 @@ public static class InputManager {
 	}
 		
 	// -- Face Buttons 
-	public static bool AButton()
-	{
-		return Input.GetButtonDown("A_Button");
-	}
-
-	public static bool BButton()
-	{
-		return Input.GetButtonDown("B_Button");
-	}
-
-	public static bool XButton()
-	{
-		return Input.GetButtonDown("X_Button");
-	}
-
-	public static bool YButton()
-	{
-		return Input.GetButtonDown("Y_Button");
-	}
+	public static bool AButton(){ return Input.GetButtonDown("A_Button");}
+	public static bool BButton(){ return Input.GetButtonDown("B_Button");}
+	public static bool XButton(){ return Input.GetButtonDown("X_Button");}
+	public static bool YButton(){ return Input.GetButtonDown("Y_Button");}
 
 	// -- DPad Buttons 
-	public static bool DPadUpButton()
-	{
-		return Input.GetButtonDown("DPad_Up");
-	}
-
-	public static bool DPadDownButton()
-	{
-		return Input.GetButtonDown("DPad_Down");
-	}
-
-	public static bool DPadLeftButton()
-	{
-		return Input.GetButtonDown("DPad_Left");
-	}
-
-	public static bool DPadRightButton()
-	{
-		return Input.GetButtonDown("DPad_Right");
-	}
+	public static bool DPadUpButton(){ return Input.GetButtonDown("DPad_Up");}
+	public static bool DPadDownButton(){ return Input.GetButtonDown("DPad_Down");}
+	public static bool DPadLeftButton(){ return Input.GetButtonDown("DPad_Left");}
+	public static bool DPadRightButton(){ return Input.GetButtonDown("DPad_Right");}
 
 	// -- Bumpers
-	public static bool LBButton()
-	{
-		return Input.GetButton("LB_Button");
-	}
-
-	public static bool RBButton()
-	{
-		return Input.GetButton("RB_Button");
-	}
+	public static bool LBButton(){ return Input.GetButton("LB_Button");}
+	public static bool RBButton(){ return Input.GetButton("RB_Button");}
 
 	// -- Extra
-	public static bool StartButton()
-	{
-		return Input.GetButton("Start_Button");
-	}
+	public static bool StartButton(){ return Input.GetButton("Start_Button");}
 }

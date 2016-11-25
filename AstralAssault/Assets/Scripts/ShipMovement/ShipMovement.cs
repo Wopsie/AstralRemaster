@@ -34,7 +34,7 @@ public class ShipMovement : MonoBehaviour {
     void YawShip()
     {
         //yaw ship left & right
-        float turnHorizontal = Input.GetAxis("Horizontal") * 2.5f;
+		float turnHorizontal = InputManager.MainHorizontal() * 2.5f;
         rb.AddTorque(transform.up * torque * turnHorizontal);
 
         objTurnScript.TurnObj(turnHorizontal);
@@ -43,18 +43,18 @@ public class ShipMovement : MonoBehaviour {
     void PitchShip()
     {
         //pitch ship up & down
-        float turnVertical = Input.GetAxis("Vertical") * 3.9f;
+		float turnVertical = InputManager.MainVertical() * 3.9f;
         rb.AddTorque(transform.right * torque * turnVertical);
     }
 
     void RollShip()
     {
-        if (keyboard.e)
+		if (InputManager.RBButton())
         {
             //roll right
             rb.AddTorque(transform.forward * -torque * 1.85f);
         }
-        else if (keyboard.q)
+		else if (InputManager.LBButton())
         {
             //roll left
             rb.AddTorque(transform.forward * torque * 1.85f);
@@ -64,14 +64,14 @@ public class ShipMovement : MonoBehaviour {
     void ShipVelocity()
     {
         //accellerate
-        if(keyboard.lShift)
+		if(InputManager.RTrigger() > 0.5f)
         {
             rb.drag = 2;
             torque = 0.8f;
 
             thruster.startLifetime = 1f;
         }
-        else if (keyboard.rShift) //brake
+		else if (InputManager.LTrigger() > 0.5f) //brake
         {
             rb.drag = 4.35f;
             torque = 1.6f;
