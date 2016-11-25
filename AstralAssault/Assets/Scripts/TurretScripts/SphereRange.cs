@@ -3,13 +3,24 @@ using System.Collections;
 
 
 //this script makes an overlapSphere on an objects position with a radius and layermask selectable through the inspector
-//it passes the first seen object position through a delegate to be picked up by any other class
+//It passes the position of a target through a delegate to be picked up by other classes.
+//It also incorperates an optional margin of error.
 public class SphereRange : MonoBehaviour
 {
     [SerializeField] [Range(1, 1000)]
     private float sphereRadius;
+    private float errorMargin = 3;
+    public float ErrorMargin {
+        get { return errorMargin;} set { errorMargin = value; } }
+
+    private Vector3 randomTargetPosition;   //target position with a slight, random margin of error
+    private Vector3 lastPosition;
+    private Vector3 targetMove;
+    private Vector3 predictedTarget;
+
     [SerializeField]
     private bool wireframe = false;
+    private bool targetInRange;
 
     private int layerMask;
     private int updateCount = 0;
@@ -17,14 +28,10 @@ public class SphereRange : MonoBehaviour
     public delegate void TargetPasser(Vector3 targetPos);
     public TargetPasser PassTarget;
 
-    private Vector3 currTargetVector, lastTargetVector, targetMovementVector;
-
-    private PredictVector3 positionPredictor = new PredictVector3();
-
     private Collider[] hitColliders;
 
-    [SerializeField]
-    private GameObject nuzzle;
+    private VectorErrorMargin vError = new VectorErrorMargin();
+    private PredictVector3 predictPosition = new PredictVector3();
 
     void Start()
     {
@@ -36,6 +43,28 @@ public class SphereRange : MonoBehaviour
         SphereSize(sphereRadius);
     }
 
+    void FixedUpdate()
+    {
+        if(targetInRange)
+        {
+            updateCount += 1;
+
+            //if updatecount divided by 2 is higher than or equals to 1... basicly is it uneven
+            //
+            //in this if-statement the velocity of the target is worked out by subtracting the position of the target on
+            //the previous frame from the position of the target on the current frame
+            if (updateCount % 2 >= 1) {
+                lastPosition = hitColliders[0].transform.position;
+            }    
+            else
+            {
+                targetMove = hitColliders[0].transform.position - lastPosition;
+                lastPosition = hitColliders[0].transform.position;
+            }
+        }else
+            updateCount = 0;
+    }
+
     void SphereSize(float radius)
     {
         //overlapsphere at the transforms position with radius through inspector
@@ -44,41 +73,25 @@ public class SphereRange : MonoBehaviour
         //if something is detected by the overlapsphere
         if(hitColliders.Length != 0)
         {
-            updateCount += 1;
-
-            //coordinates of the first collider detected by overlapsphere
-            currTargetVector = hitColliders[0].transform.position;
-
-            //if updatecount divided by 2 is higher than or equals to 1... basicly is it uneven
-            if (updateCount % 2 >= 1)
-            {
-                lastTargetVector = hitColliders[0].transform.position;
-            }
-            
-            //to be looked at later
-            targetMovementVector = currTargetVector - lastTargetVector;
-            targetMovementVector = 3f * targetMovementVector;
-            
-            //make target position a random position inside a radius of the target
-            currTargetVector = Random.insideUnitSphere * 6 + currTargetVector;
-
-            Vector3 targetPosition = Random.insideUnitSphere * 3 + hitColliders[0].transform.position;
-            //Vector3 targetPosition = hitColliders[0].transform.position;
-
+            targetInRange = true;
+            RandomizeTarget();
 
             if (PassTarget != null)
             {
-                //demo
-                PassTarget(targetPosition);
-
-                //to be fixed later
-                //PassTarget(positionPredictor.CalcPos(currTargetVector, nuzzle.transform.position, targetMovementVector, 10));
+                PassTarget(predictPosition.CalcPos(randomTargetPosition, transform.position, targetMove, 500f));
             }
         }
         else
-        {
-            updateCount = 0;
-        }
+            targetInRange = false;
+    }
+
+    //add a random margin of error to target position before shooting
+    void RandomizeTarget()
+    {
+        if (errorMargin < 0)
+            errorMargin = 3;
+        else
+            randomTargetPosition = vError.AddRandomUnitSphere(hitColliders[0].transform.position, errorMargin);
     }
 
     void OnDrawGizmos()

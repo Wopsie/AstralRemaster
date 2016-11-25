@@ -10,7 +10,6 @@ public class projectileCollision : MonoBehaviour {
     [SerializeField]
     private GameObject sparks;
     
-
     void Start()
     {
         layerMask = LayerMask.GetMask("Player");
@@ -18,24 +17,34 @@ public class projectileCollision : MonoBehaviour {
 
 	void Update()
     {
-        Vector3 fwd = transform.TransformDirection(Vector3.forward / 2);
+        Vector3 fwd = transform.TransformDirection(Vector3.forward);
 
         RaycastHit hit;
-
+        
         if (Physics.Raycast(transform.position, fwd, out hit))
         {
-            //print("Found an object - distance: " + hit.collider.gameObject.name);
-            
-            if (hit.collider.gameObject.tag != null)
+            //Debug.Log(hit.collider.gameObject.tag);
+
+            /*
+            if (hit.collider.gameObject.tag == Tags.playerTag && hit.distance < 3)
             {
-                var boom = (GameObject)Instantiate(sparks, this.transform.position, transform.rotation);
+                var boom = (GameObject)Instantiate(sparks, transform.position, transform.rotation);
                 Destroy(boom, 3);
-                Debug.Log("Hit Player");
 
                 Destroy(gameObject);
             }
-        }
+            */
+        } 
+    }
 
-            
+    void OnCollisionEnter(Collision coll)
+    {
+        if (coll.gameObject.tag == Tags.playerTag || coll.gameObject.tag == Tags.AsteroidTag || coll.gameObject.tag == "Untagged") ;
+        {
+            var boom = (GameObject)Instantiate(sparks, transform.position, transform.rotation);
+            Destroy(boom, 3);
+
+            Destroy(gameObject);
+        }
     }
 }

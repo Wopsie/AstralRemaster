@@ -8,6 +8,6 @@ public class moveForward : MonoBehaviour {
 
 	void Update()
     {
-        transform.Translate(new Vector3(0,0,1) * multiplier);
+        transform.Translate(Vector3.forward * multiplier * Time.deltaTime);
     }
 }

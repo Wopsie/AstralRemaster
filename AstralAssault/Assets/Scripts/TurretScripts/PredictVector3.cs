@@ -3,21 +3,19 @@ using System.Collections;
 
 public class PredictVector3 {
 
-	public Vector3 CalcPos(Vector3 targetPos, Vector3 callPos, Vector3 targetMovement, float bulletSpeed)
+    private float travelTime;
+    private float dist;
+    private Vector3 predictedPos;
+    
+	public Vector3 CalcPos(Vector3 targetPos, Vector3 shotPos, Vector3 targetVelocity, float bulletSpeed)
     {
-        //get target position
+        bulletSpeed = bulletSpeed * Time.fixedDeltaTime;
 
-        //get bullet speed
+        dist = Vector3.Distance(shotPos, targetPos);
 
-        //get distance to player
+        travelTime = dist / bulletSpeed;
 
-        //get bullet to target traveltime
-        float targetDistance = Vector3.Distance(callPos, targetPos);
-        //Debug.Log(targetDistance);
-
-        float traveltime = targetDistance / bulletSpeed;
-
-        Vector3 predictedPos = targetPos + targetMovement * traveltime;
+        predictedPos = targetPos + targetVelocity * travelTime;
 
         return predictedPos;
     }
