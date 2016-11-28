@@ -1,7 +1,13 @@
 fileFormatVersion: 2
-guid: 1cc6c66cf6c8ae544b63f2a72ca2db74
+<<<<<<< HEAD:AstralAssault/Assets/Audio/Explosion.meta
+guid: a4e5d40d114d1fc4f83bfef4b271a804
 folderAsset: yes
-timeCreated: 1479323913
+timeCreated: 1480330296
+=======
+guid: 9efb6ca0733fd496b9d621f8a8127f57
+folderAsset: yes
+timeCreated: 1479932623
+>>>>>>> origin/Tim:AstralAssault/Assets/Models/Materials.meta
 licenseType: Free
 DefaultImporter:
   userData: 
