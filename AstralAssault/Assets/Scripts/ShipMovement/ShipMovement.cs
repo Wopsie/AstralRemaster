@@ -43,36 +43,37 @@ public class ShipMovement : MonoBehaviour {
     void PitchShip()
     {
         //pitch ship up & down
-		float turnVertical = InputManager.MainVertical() * 3.9f;
+		float turnVertical = -InputManager.MainVertical() * 3.9f;
         rb.AddTorque(transform.right * torque * turnVertical);
     }
 
     void RollShip()
     {
-		if (InputManager.RBButton())
+		if (keyboard.q || InputManager.LBButton())
         {
             //roll right
-            rb.AddTorque(transform.forward * -torque * 1.85f);
+            rb.AddTorque(transform.forward * torque * 1.85f);
         }
-		else if (InputManager.LBButton())
+		else if (keyboard.e || InputManager.RBButton())
         {
             //roll left
-            rb.AddTorque(transform.forward * torque * 1.85f);
+            rb.AddTorque(transform.forward * -torque * 1.85f);
         }
     }
 
     void ShipVelocity()
     {
         //accellerate
-		if(InputManager.RTrigger() > 0.5f)
+		if(InputManager.RTrigger() > 0.5f || keyboard.lShift)
         {
             rb.drag = 2;
             torque = 0.8f;
 
             thruster.startLifetime = 1f;
         }
-		else if (InputManager.LTrigger() > 0.5f) //brake
+		else if (keyboard.rShift  || InputManager.LTrigger() > 0.5f) //brake
         {
+            //Debug.Log("Braking");
             rb.drag = 4.35f;
             torque = 1.6f;
         }
