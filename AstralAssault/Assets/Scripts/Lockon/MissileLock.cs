@@ -12,11 +12,12 @@ public class MissileLock : MonoBehaviour {
     [SerializeField]
     private Camera cam;
 
-    private Dictionary<int, GameObject> enemyDict = new Dictionary<int, GameObject>();
     private List<GameObject> enemyList = new List<GameObject>();
     private GameObject[] enemyArray;
 
     private Vector3[] screenPos;
+
+    private GameObject target;
 
 	void Start()
     {
@@ -33,18 +34,32 @@ public class MissileLock : MonoBehaviour {
     //this returns the first object that enters the circle it makes in this method
     void LockCircle(float radius)
     {
-
-        //Debug.Log(screenPos[0].x - screenCenter.x);
-
         //if any of the enemies in scene screenpos are within radius
-        /*
+        
         for (int i = 0; i < screenPos.Length; i++)
         {
             //if((screenPos[i] - screenCenter) )
 
         }
-        */
+        
         //Debug.Log(circleCircum);
+
+        //fill screenPos array with screenpositions of all enemies in scene
+        int j = 0;
+        foreach(GameObject g in enemyList)
+        {
+            screenPos[j] = cam.WorldToScreenPoint(g.transform.position);
+            j++;
+        }
+
+        Debug.Log(screenPos[0].y - screenCenter.y);
+
+        Debug.Log(target.gameObject.name);
+
+        if(screenPos[0].x - screenCenter.x <= 200 && screenPos[0].x - screenCenter.x >= -200 && screenPos[0].y - screenCenter.y <= 200 && screenPos[0].y - screenCenter.y >= 200)
+        {
+            Debug.Log("Lock On");
+        }
     }
 
     void CalcEnemyScreenPos()
@@ -63,8 +78,10 @@ public class MissileLock : MonoBehaviour {
         {
             //enemyDict.Add(i, g);
             enemyList.Add(g);
-            //Debug.Log(enemyDict[i].gameObject.name);
             i++;
+
+            target = g;
         }
+        screenPos = new Vector3[enemyList.Count];
     }
 }
