@@ -6,19 +6,18 @@ using System.Collections.Generic;
 //this class will look for enemies within a certain radius from the center of the screen
 public class MissileLock : MonoBehaviour {
 
+    private float distFromCenter;
     private float circleCircum;
     private Vector3 screenCenter;
-
-    [SerializeField]
-    private Camera cam;
-
-    private List<GameObject> enemyList = new List<GameObject>();
-    private GameObject[] enemyArray;
-
+    private Vector3 targetScreenPos;
+    private Vector3 lockCircle = new Vector3(200, 150, 0);
     private Vector3[] screenPos;
-
     private GameObject target;
-
+    private GameObject[] enemyArray;
+    private List<GameObject> enemyList = new List<GameObject>();
+    [SerializeField] private Camera cam;
+    private SwitchTarget<GameObject> switchTarget = new SwitchTarget<GameObject>();
+    
 	void Start()
     {
         screenCenter = new Vector3(Screen.width / 2, Screen.height / 2, 0);
@@ -28,22 +27,14 @@ public class MissileLock : MonoBehaviour {
     void Update()
     {
         LockCircle(5);
-        CalcEnemyScreenPos();
+
+        target = switchTarget.SwitchTargets(enemyList, true);
+        Debug.Log(target);
     }
 
     //this returns the first object that enters the circle it makes in this method
     void LockCircle(float radius)
     {
-        //if any of the enemies in scene screenpos are within radius
-        
-        for (int i = 0; i < screenPos.Length; i++)
-        {
-            //if((screenPos[i] - screenCenter) )
-
-        }
-        
-        //Debug.Log(circleCircum);
-
         //fill screenPos array with screenpositions of all enemies in scene
         int j = 0;
         foreach(GameObject g in enemyList)
@@ -52,19 +43,47 @@ public class MissileLock : MonoBehaviour {
             j++;
         }
 
-        Debug.Log(screenPos[0].y - screenCenter.y);
+        targetScreenPos = cam.WorldToScreenPoint(target.transform.position);
 
-        Debug.Log(target.gameObject.name);
+        CheckIfInCircle(targetScreenPos);
+    }
 
-        if(screenPos[0].x - screenCenter.x <= 200 && screenPos[0].x - screenCenter.x >= -200 && screenPos[0].y - screenCenter.y <= 200 && screenPos[0].y - screenCenter.y >= 200)
+    void CheckIfInCircle(Vector3 selectTarget)
+    {
+        distFromCenter = Vector2.Distance(selectTarget, screenCenter);
+
+        //check if object is within certain distance from screen center
+        if(distFromCenter <= 200 && distFromCenter >= -200)
         {
-            Debug.Log("Lock On");
+            //Debug.Log("LOCK ON TO " + target.gameObject.name);
         }
+    }
+
+    void TargetSwitch()
+    {
+        int i = enemyList.Count;
+        switchTarget.SwitchTargets(enemyList, true);
     }
 
     void CalcEnemyScreenPos()
     {
+        //find way to remove specific enemies from list after they have been removed from scene
 
+        int i = 0;
+        foreach (GameObject g in enemyArray)
+        {
+            //linkedlist syntax
+            //enemyList.AddFirst(g);
+
+            //list syntax
+            enemyList.Add(g);
+            i++;
+
+            //temporarily assign target to be gameobject g
+            //later this is to be controlled by player
+            target = g;
+        }
+        screenPos = new Vector3[enemyList.Count];
     }
 
     public void FindEnemies()
@@ -73,15 +92,6 @@ public class MissileLock : MonoBehaviour {
         enemyArray = null;
         enemyArray = GameObject.FindGameObjectsWithTag("Enemy");
 
-        int i = 0;
-        foreach(GameObject g in enemyArray)
-        {
-            //enemyDict.Add(i, g);
-            enemyList.Add(g);
-            i++;
-
-            target = g;
-        }
-        screenPos = new Vector3[enemyList.Count];
+        CalcEnemyScreenPos();
     }
 }
