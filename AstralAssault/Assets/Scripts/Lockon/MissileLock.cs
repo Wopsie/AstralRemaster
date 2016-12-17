@@ -26,8 +26,9 @@ public class MissileLock : MonoBehaviour {
 
     void Update()
     {
-        LockCircle(5);
+        CalcScreenPos();
 
+        //test input, temporary solution
         if(Input.GetKeyDown(KeyCode.O))
         {
             target = switchTarget.SwitchTargets(enemyList, true);
@@ -38,8 +39,10 @@ public class MissileLock : MonoBehaviour {
         Debug.Log(target);
     }
 
-    //this returns the first object that enters the circle it makes in this method
-    void LockCircle(float radius)
+    //==KNOWN BUG: If an enemy is destroyed LockCircle method breaks because it tries to calc screenpos of destroyed gameobject
+
+    //this method calculates the screenposition of all enemies
+    void CalcScreenPos()
     {
         //fill screenPos array with screenpositions of all enemies in scene
         int j = 0;
@@ -51,37 +54,28 @@ public class MissileLock : MonoBehaviour {
 
         targetScreenPos = cam.WorldToScreenPoint(target.transform.position);
 
-        CheckIfInCircle(targetScreenPos);
+        CheckInRadius(targetScreenPos);
     }
 
-    void CheckIfInCircle(Vector3 selectTarget)
+    void CheckInRadius(Vector3 selectTarget)
     {
         distFromCenter = Vector2.Distance(selectTarget, screenCenter);
 
         //check if object is within certain distance from screen center
         if(distFromCenter <= 200 && distFromCenter >= -200)
         {
-            //Debug.Log("LOCK ON TO " + target.gameObject.name);
+            Debug.Log("LOCK ON TO " + target.gameObject.name);
+            //tell Lock UI to appear and start moving towards screenpos of target
         }
     }
 
-    void TargetSwitch()
-    {
-        int i = enemyList.Count;
-        switchTarget.SwitchTargets(enemyList, true);
-    }
-
-    void CalcEnemyScreenPos()
+    void StoreEnemies()
     {
         //find way to remove specific enemies from list after they have been removed from scene
 
         int i = 0;
         foreach (GameObject g in enemyArray)
         {
-            //linkedlist syntax
-            //enemyList.AddFirst(g);
-
-            //list syntax
             enemyList.Add(g);
             i++;
 
@@ -98,6 +92,6 @@ public class MissileLock : MonoBehaviour {
         enemyArray = null;
         enemyArray = GameObject.FindGameObjectsWithTag("Enemy");
 
-        CalcEnemyScreenPos();
+        StoreEnemies();
     }
 }

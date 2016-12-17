@@ -2,7 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 
-//this class will resort a list and put the value of index at the top of the list if it isnt already
+//this class "scrolls" up and down through a generic list depending on the value of the boolean "countDown"
+//and returns the 
 public class ListScroller<T> {
 
     private int index = 0;
@@ -16,13 +17,12 @@ public class ListScroller<T> {
             index--;
         }
 
+        //resets the index so it doest go out of range
         if(index > objs.Count -1){
             index = 0;
         }else if(index < 0){
             index = objs.Count - 1;
         }
-
-        Debug.Log(index + "/" + objs.Count); 
 
         T g = objs[index];
 
