@@ -16,7 +16,7 @@ public class MissileLock : MonoBehaviour {
     private GameObject[] enemyArray;
     private List<GameObject> enemyList = new List<GameObject>();
     [SerializeField] private Camera cam;
-    private SwitchTarget<GameObject> switchTarget = new SwitchTarget<GameObject>();
+    private ListScroller<GameObject> switchTarget = new ListScroller<GameObject>();
     
 	void Start()
     {
@@ -28,7 +28,13 @@ public class MissileLock : MonoBehaviour {
     {
         LockCircle(5);
 
-        target = switchTarget.SwitchTargets(enemyList, true);
+        if(Input.GetKeyDown(KeyCode.O))
+        {
+            target = switchTarget.SwitchTargets(enemyList, true);
+        }else if(Input.GetKeyDown(KeyCode.P))
+        {
+            target = switchTarget.SwitchTargets(enemyList, false);
+        }
         Debug.Log(target);
     }
 

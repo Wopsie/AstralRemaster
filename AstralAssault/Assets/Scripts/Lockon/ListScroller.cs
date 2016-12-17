@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 //this class will resort a list and put the value of index at the top of the list if it isnt already
-public class SwitchTarget<T> {
+public class ListScroller<T> {
 
     private int index = 0;
 
@@ -16,14 +16,14 @@ public class SwitchTarget<T> {
             index--;
         }
 
-        if(index > objs.Count){
+        if(index > objs.Count -1){
             index = 0;
+        }else if(index < 0){
+            index = objs.Count - 1;
         }
 
-        if(index < 0){
-            index = objs.Count;
-        }
-        Debug.Log(index);
+        Debug.Log(index + "/" + objs.Count); 
+
         T g = objs[index];
 
         return g;
